@@ -46,7 +46,7 @@ dfn {
   font-style: italic; }
 
 h1 {
-  font-size: 1em;
+  font-size: 1.8em;
   margin: .67em 0; }
 
 mark {
@@ -205,7 +205,7 @@ html, body {
   margin: 0; }
 
 h1 {
-  font-size: 1em;
+  font-size: 1.8em;
   margin-top: 0;
   font-family: 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif;
   font-weight: 700; }
@@ -484,7 +484,7 @@ p {
   body {
     font-weight: 100; }
   h1 {
-    font-size: 1em; }
+    font-size: 1.8em; }
   p {
     font-size: 20px; }
   /* =Header */
