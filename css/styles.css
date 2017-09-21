@@ -394,7 +394,7 @@ p {
     top: 10%; }
   .slide#slide02 .wrapper {
     position: absolute;
-    bottom: 10%; }
+    top: 10%; }
   .slide#slide03 .button {
     border-color: #ffffff;
     color: #212121;
