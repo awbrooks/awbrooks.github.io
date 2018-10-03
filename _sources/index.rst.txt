@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to VMI Bootcamp II!
+Welcome to the Second VMI Bootcamp!
 ===========================================
 
 
@@ -11,21 +11,32 @@ Welcome to VMI Bootcamp II!
    :scale: 30 %
    :alt: VMI Logo Stacked
 
+VMI Website: `Vanderbilt Microbiome Initiative <https://my.vanderbilt.edu/microbiome/>`_.
+
 Organized by the Vanderbilt Microbiome Initiative (VMI) and funded by Vanderbilt University Trans-Institutional Programs (TIPs).
 
 This is an introduction to 16S rDNA microbiome analyses using QIIME 2.
 
 
+Microbiome Introduction
+-----------------------
+
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
    
    1_microbiome_introduction
+   
+Command Line Tutorials
+----------------------
+
+.. toctree::
+   :maxdepth: 2  
+   
    2_command_line_introduction
    code
 
-Indices and tables
-==================
+Other Resources
+---------------
 
 * :ref:`genindex`
 * :ref:`modindex`

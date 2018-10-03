@@ -56,3 +56,8 @@ This is a useful gene because:
    :alt: 16S Variable Regions 
    
 Nine variable regions are each separated by conserved regions.
+
+
+.. figure:: ./images/cookie_monster.gif
+   :scale: 300 %
+   :alt: Yummy 
