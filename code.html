@@ -17,8 +17,7 @@
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Command Line Tutorial" href="2_command_line_introduction.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -26,12 +25,6 @@
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="2_command_line_introduction.html" title="Command Line Tutorial"
-             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">VMI Bootcamp II 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>  
@@ -44,205 +37,6 @@
   <div class="section" id="python-scripts">
 <h1>Python Scripts<a class="headerlink" href="#python-scripts" title="Permalink to this headline">¶</a></h1>
 <p>These are python functions built on the QIIME2 python packages.</p>
-<span class="target" id="module-string_matching"></span><dl class="function">
-<dt id="string_matching.str_fuzzy_match_full">
-<code class="descclassname">string_matching.</code><code class="descname">str_fuzzy_match_full</code><span class="sig-paren">(</span><em>str_in</em>, <em>list_in</em>, <em>limit=5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/string_matching.html#str_fuzzy_match_full"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#string_matching.str_fuzzy_match_full" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Description -</li>
-</ul>
-<dl class="docutils">
-<dt>Return best matches from a list to a query string.</dt>
-<dd><ul class="first last simple">
-<li>Takes full words, punctuation, and spaces into account.</li>
-<li>Use str_fuzzy_partialscore() instead to test if string in other string.</li>
-</ul>
-</dd>
-</dl>
-<ul class="simple">
-<li>Parameters -</li>
-</ul>
-<p>str_in : query string
-list_in : list of strings to match against
-limit : number of matches to return</p>
-<ul class="simple">
-<li>Returns -</li>
-</ul>
-<p>similarity score : int</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="string_matching.str_fuzzy_match_partial">
-<code class="descclassname">string_matching.</code><code class="descname">str_fuzzy_match_partial</code><span class="sig-paren">(</span><em>str_in</em>, <em>list_in</em>, <em>limit=5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/string_matching.html#str_fuzzy_match_partial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#string_matching.str_fuzzy_match_partial" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Description -</li>
-</ul>
-<dl class="docutils">
-<dt>Return best matches from a list to a query string if one string can be found in the other string.</dt>
-<dd><ul class="first last simple">
-<li>Takes full words, punctuation, and spaces into account.</li>
-<li>Removes prefix and suffix.</li>
-</ul>
-</dd>
-</dl>
-<ul class="simple">
-<li>Parameters -</li>
-</ul>
-<p>str_in : query string
-list_in : list of strings to match against
-limit : number of matches to return</p>
-<ul class="simple">
-<li>Returns -</li>
-</ul>
-<p>similarity score : int</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="string_matching.str_fuzzy_match_set">
-<code class="descclassname">string_matching.</code><code class="descname">str_fuzzy_match_set</code><span class="sig-paren">(</span><em>str_in</em>, <em>list_in</em>, <em>limit=5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/string_matching.html#str_fuzzy_match_set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#string_matching.str_fuzzy_match_set" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Description -</li>
-</ul>
-<dl class="docutils">
-<dt>Return best matches from a list to a query string based on words in a set.</dt>
-<dd><ul class="first last simple">
-<li>Breaks words apart by white spaces.</li>
-<li>Removes all punctuation (keeps numbers).</li>
-<li>Lowercases all letters.</li>
-<li>Sorts the words, and then checks matches.</li>
-</ul>
-</dd>
-</dl>
-<ul class="simple">
-<li>Parameters -</li>
-</ul>
-<p>str_in : query string
-list_in : list of strings to match against
-limit : number of matches to return</p>
-<ul class="simple">
-<li>Returns -</li>
-</ul>
-<p>similarity score : int</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="string_matching.str_fuzzy_match_sort">
-<code class="descclassname">string_matching.</code><code class="descname">str_fuzzy_match_sort</code><span class="sig-paren">(</span><em>str_in</em>, <em>list_in</em>, <em>limit=5</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/string_matching.html#str_fuzzy_match_sort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#string_matching.str_fuzzy_match_sort" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Description -</li>
-</ul>
-<dl class="docutils">
-<dt>Return best matches from a list to a query string based on words.</dt>
-<dd><ul class="first last simple">
-<li>Breaks words apart by white spaces.</li>
-<li>Removes all punctuation (keeps numbers).</li>
-<li>Lowercases all letters.</li>
-<li>Sorts the words, and then checks matches.</li>
-</ul>
-</dd>
-</dl>
-<ul class="simple">
-<li>Parameters -</li>
-</ul>
-<p>str_in : query string
-list_in : list of strings to match against
-limit : number of matches to return</p>
-<ul class="simple">
-<li>Returns -</li>
-</ul>
-<p>similarity score : int</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="string_matching.str_fuzzy_score_full">
-<code class="descclassname">string_matching.</code><code class="descname">str_fuzzy_score_full</code><span class="sig-paren">(</span><em>str1</em>, <em>str2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/string_matching.html#str_fuzzy_score_full"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#string_matching.str_fuzzy_score_full" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Description -</li>
-</ul>
-<p>Return score (0-100) on how similar two strings are.</p>
-<blockquote>
-<div><ul class="simple">
-<li>Takes full words, punctuation, and spaces into account.</li>
-<li>Use str_fuzzy_partialscore() instead to test if string in other string.</li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li>Parameters -</li>
-</ul>
-<p>str1,str2 : two strings</p>
-<ul class="simple">
-<li>Returns -</li>
-</ul>
-<p>similarity score : int</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="string_matching.str_fuzzy_score_partial">
-<code class="descclassname">string_matching.</code><code class="descname">str_fuzzy_score_partial</code><span class="sig-paren">(</span><em>str1</em>, <em>str2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/string_matching.html#str_fuzzy_score_partial"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#string_matching.str_fuzzy_score_partial" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Description -</li>
-</ul>
-<p>Return score (0-100) on if one string can be found in the other string.</p>
-<ul class="simple">
-<li>Parameters -</li>
-</ul>
-<p>str1,str2 : two strings</p>
-<ul class="simple">
-<li>Returns -</li>
-</ul>
-<p>similarity score : int</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="string_matching.str_fuzzy_score_set">
-<code class="descclassname">string_matching.</code><code class="descname">str_fuzzy_score_set</code><span class="sig-paren">(</span><em>str1</em>, <em>str2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/string_matching.html#str_fuzzy_score_set"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#string_matching.str_fuzzy_score_set" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Description -</li>
-</ul>
-<p>Return score (0-100) on whether set of words in one string are a subset of the other string.</p>
-<blockquote>
-<div><ul class="simple">
-<li>Breaks words apart by white spaces.</li>
-<li>Removes all punctuation (keeps numbers).</li>
-<li>Lowercases all letters.</li>
-<li>Sorts the words, and then checks matches.</li>
-<li>Words must be equal,</li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li>Parameters -</li>
-</ul>
-<p>str1,str2 : two strings</p>
-<ul class="simple">
-<li>Returns -</li>
-</ul>
-<p>similarity score : int</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="string_matching.str_fuzzy_score_sort">
-<code class="descclassname">string_matching.</code><code class="descname">str_fuzzy_score_sort</code><span class="sig-paren">(</span><em>str1</em>, <em>str2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/string_matching.html#str_fuzzy_score_sort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#string_matching.str_fuzzy_score_sort" title="Permalink to this definition">¶</a></dt>
-<dd><ul class="simple">
-<li>Description -</li>
-</ul>
-<p>Return score (0-100) on whether all words in one string all appear in the other string.</p>
-<blockquote>
-<div><ul class="simple">
-<li>Breaks words apart by white spaces.</li>
-<li>Removes all punctuation (keeps numbers).</li>
-<li>Lowercases all letters.</li>
-<li>Sorts the words, and then checks matches.</li>
-</ul>
-</div></blockquote>
-<ul class="simple">
-<li>Parameters -</li>
-</ul>
-<p>str1,str2 : two strings</p>
-<ul class="simple">
-<li>Returns -</li>
-</ul>
-<p>similarity score : int</p>
-</dd></dl>
-
 </div>
 
 
@@ -251,9 +45,6 @@ limit : number of matches to return</p>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="2_command_line_introduction.html"
-                        title="previous chapter">Command Line Tutorial</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -283,12 +74,6 @@ limit : number of matches to return</p>
         <li class="right" style="margin-right: 10px">
           <a href="genindex.html" title="General Index"
              >index</a></li>
-        <li class="right" >
-          <a href="py-modindex.html" title="Python Module Index"
-             >modules</a> |</li>
-        <li class="right" >
-          <a href="2_command_line_introduction.html" title="Command Line Tutorial"
-             >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">VMI Bootcamp II 1.0 documentation</a> &#187;</li> 
       </ul>
     </div>
