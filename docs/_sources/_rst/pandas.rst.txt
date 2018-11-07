@@ -1,0 +1,90 @@
+Pandas
+##########################################################################################
+
+**Common examples and useful functions for data manipulation with the python pandas package**
+
+   - The variable *df* refers to a pandas.DataFrame
+   - Pandas was imported as *pd*: import pandas as pd
+
+
+   - Pandas DataFrames are generally composed of:
+      - Column Headers (Samples, top row) - df.columns
+      - Index Headers (Observations, leftmost column) - df.index
+      - Values - Data associated with an individual column and index location
+      
+Example Code
+******************************************************************************************
+
+Selecting and Manipulating Data
+==========================================================================================
+
+Subset Columns or Rows - **df.filter**
+------------------------------------------------------------------------------------------
+
+DataFrame.filter(items=None, like=None, regex=None, axis=None)
+
+   - **items** : list-like - list of columns or index to keep
+   - **like** : string - does the column or index contain 'like' substring
+   - **regex** : string (regular expression) - same as like, but takes regular expressions
+   - **axis** : int or string axis name - The axis to filter on. 
+
+.. code-block:: python
+   
+   # Filter cols by List of Items #
+   df.filter(items=['col1','col2'])
+   
+   # Filter cols by Regex #
+   df.filter(regex=("mb.*pre"))
+   
+   # Filter cols by substring #
+   df.filter(like=("mb"))
+   
+   # Filter the index instead #
+   df.filter(regex=("mb.*pre"), axis=1)
+
+Replace Values - **df.replace**
+------------------------------------------------------------------------------------------
+
+DataFrame.replace(to_replace=None, value=None, inplace=False, limit=None, regex=False, method='pad')
+
+   - This is an extremely flexible way to replace values in a dataframe with other values 
+   - **to_replace** - the values that will be replaced
+      - numeric, str, regex - any values matching the pattern will be replaced
+      - list - then **value** must also be a list of the same length, if **regex** is true all values will be treated as regex
+      - dict - Two options:
+         - dict {'a':'b','c':'d'} & values == None then replace a with b and c with d
+         - dict {'a':'b','c':'d'} & values == List then b is looked for in column a and replaced with first value in the list...
+
+.. code-block:: python
+   
+   # Replace all values of 'a' with 'b'
+   df.replace(to_replace='a', value='b')
+   
+   # Replace with lists #
+   df.replace(to_replace=['a','c'], value=['b','d'])
+   
+   # Replace in specific columns #
+   df.replace(to_replace={'col1':'a','col2':'b'}, value=['c','d'])
+   
+   # Replace all non-numeric values with nothing and convert all values to float #
+   df.replace(to_replace='[^0-9]+', value='', inplace=False, regex=True).astype(float)
+
+Statistical Transformations
+==========================================================================================
+
+Correlation - **df.corr**
+------------------------------------------------------------------------------------------
+
+DataFrame.corr(method='pearson', min_periods=1)
+
+   - Compute pairwise correlation of columns, excluding NA/null values
+   - **method** : str - The method to calculate correlation
+   - **min_periods** : int, optional - Minimum number of observations required per pair of columns to have a valid result 
+
+.. code-block:: python
+   
+   # Get Pearson Parametric Correlation of Columns #
+   df.corr(method='pearson')
+   
+   # Get Spearman NonParametric Correlation of Columns with at least five comparable observations #
+   df.corr(method='spearman', min_periods=5)

@@ -1,0 +1,232 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Pandas &#8212; brooks_toolkit 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Plotting in Python" href="plotting.html" />
+    <link rel="prev" title="My Research Experience" href="personal_info.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="plotting.html" title="Plotting in Python"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="personal_info.html" title="My Research Experience"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">brooks_toolkit 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pandas">
+<h1>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h1>
+<p><strong>Common examples and useful functions for data manipulation with the python pandas package</strong></p>
+<blockquote>
+<div><ul class="simple">
+<li>The variable <em>df</em> refers to a pandas.DataFrame</li>
+<li>Pandas was imported as <em>pd</em>: import pandas as pd</li>
+<li><dl class="first docutils">
+<dt>Pandas DataFrames are generally composed of:</dt>
+<dd><ul class="first last">
+<li>Column Headers (Samples, top row) - df.columns</li>
+<li>Index Headers (Observations, leftmost column) - df.index</li>
+<li>Values - Data associated with an individual column and index location</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<div class="section" id="example-code">
+<h2>Example Code<a class="headerlink" href="#example-code" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="selecting-and-manipulating-data">
+<h3>Selecting and Manipulating Data<a class="headerlink" href="#selecting-and-manipulating-data" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="subset-columns-or-rows-df-filter">
+<h4>Subset Columns or Rows - <strong>df.filter</strong><a class="headerlink" href="#subset-columns-or-rows-df-filter" title="Permalink to this headline">¶</a></h4>
+<p>DataFrame.filter(items=None, like=None, regex=None, axis=None)</p>
+<blockquote>
+<div><ul class="simple">
+<li><strong>items</strong> : list-like - list of columns or index to keep</li>
+<li><strong>like</strong> : string - does the column or index contain ‘like’ substring</li>
+<li><strong>regex</strong> : string (regular expression) - same as like, but takes regular expressions</li>
+<li><strong>axis</strong> : int or string axis name - The axis to filter on.</li>
+</ul>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Filter cols by List of Items #</span>
+<span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">items</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;col1&#39;</span><span class="p">,</span><span class="s1">&#39;col2&#39;</span><span class="p">])</span>
+
+<span class="c1"># Filter cols by Regex #</span>
+<span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;mb.*pre&quot;</span><span class="p">))</span>
+
+<span class="c1"># Filter cols by substring #</span>
+<span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">like</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;mb&quot;</span><span class="p">))</span>
+
+<span class="c1"># Filter the index instead #</span>
+<span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">regex</span><span class="o">=</span><span class="p">(</span><span class="s2">&quot;mb.*pre&quot;</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="replace-values-df-replace">
+<h4>Replace Values - <strong>df.replace</strong><a class="headerlink" href="#replace-values-df-replace" title="Permalink to this headline">¶</a></h4>
+<p>DataFrame.replace(to_replace=None, value=None, inplace=False, limit=None, regex=False, method=’pad’)</p>
+<blockquote>
+<div><ul class="simple">
+<li>This is an extremely flexible way to replace values in a dataframe with other values</li>
+<li><dl class="first docutils">
+<dt><strong>to_replace</strong> - the values that will be replaced</dt>
+<dd><ul class="first last">
+<li>numeric, str, regex - any values matching the pattern will be replaced</li>
+<li>list - then <strong>value</strong> must also be a list of the same length, if <strong>regex</strong> is true all values will be treated as regex</li>
+<li><dl class="first docutils">
+<dt>dict - Two options:</dt>
+<dd><ul class="first last">
+<li>dict {‘a’:’b’,’c’:’d’} &amp; values == None then replace a with b and c with d</li>
+<li>dict {‘a’:’b’,’c’:’d’} &amp; values == List then b is looked for in column a and replaced with first value in the list…</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace all values of &#39;a&#39; with &#39;b&#39;</span>
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+
+<span class="c1"># Replace with lists #</span>
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">],</span> <span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">])</span>
+
+<span class="c1"># Replace in specific columns #</span>
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;col1&#39;</span><span class="p">:</span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="s1">&#39;col2&#39;</span><span class="p">:</span><span class="s1">&#39;b&#39;</span><span class="p">},</span> <span class="n">value</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;c&#39;</span><span class="p">,</span><span class="s1">&#39;d&#39;</span><span class="p">])</span>
+
+<span class="c1"># Replace all non-numeric values with nothing and convert all values to float #</span>
+<span class="n">df</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">to_replace</span><span class="o">=</span><span class="s1">&#39;[^0-9]+&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="statistical-transformations">
+<h3>Statistical Transformations<a class="headerlink" href="#statistical-transformations" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="correlation-df-corr">
+<h4>Correlation - <strong>df.corr</strong><a class="headerlink" href="#correlation-df-corr" title="Permalink to this headline">¶</a></h4>
+<p>DataFrame.corr(method=’pearson’, min_periods=1)</p>
+<blockquote>
+<div><ul class="simple">
+<li>Compute pairwise correlation of columns, excluding NA/null values</li>
+<li><strong>method</strong> : str - The method to calculate correlation</li>
+<li><strong>min_periods</strong> : int, optional - Minimum number of observations required per pair of columns to have a valid result</li>
+</ul>
+</div></blockquote>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get Pearson Parametric Correlation of Columns #</span>
+<span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">)</span>
+
+<span class="c1"># Get Spearman NonParametric Correlation of Columns with at least five comparable observations #</span>
+<span class="n">df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;spearman&#39;</span><span class="p">,</span> <span class="n">min_periods</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Pandas</a><ul>
+<li><a class="reference internal" href="#example-code">Example Code</a><ul>
+<li><a class="reference internal" href="#selecting-and-manipulating-data">Selecting and Manipulating Data</a><ul>
+<li><a class="reference internal" href="#subset-columns-or-rows-df-filter">Subset Columns or Rows - <strong>df.filter</strong></a></li>
+<li><a class="reference internal" href="#replace-values-df-replace">Replace Values - <strong>df.replace</strong></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#statistical-transformations">Statistical Transformations</a><ul>
+<li><a class="reference internal" href="#correlation-df-corr">Correlation - <strong>df.corr</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="personal_info.html"
+                        title="previous chapter"><strong>My Research Experience</strong></a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="plotting.html"
+                        title="next chapter">Plotting in Python</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/_rst/pandas.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="plotting.html" title="Plotting in Python"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="personal_info.html" title="My Research Experience"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">brooks_toolkit 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Andrew W. Brooks.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.1.
+    </div>
+  </body>
+</html>

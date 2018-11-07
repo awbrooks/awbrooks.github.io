@@ -1,0 +1,54 @@
+Configuration Files
+##########################################################################################
+
+**A configuration file allows you to store variables in a separate file**
+
+- Often you will want to run the same script while changing some variables
+- By placing these variable in a config file you can:
+   - make many small config files and not tons of large scripts
+   - quickly write many config files automatically
+
+There are a lot of ways this could be done...
+   - This code uses YAML format because it is: 
+      - human readable
+      - easily parsed out and in
+      - adaptable with python libraries
+      
+
+Writing Config Files
+==========================================================================================
+
+.. code-block:: bash
+   
+   import yaml
+   
+   # Save location of configuration file #
+   out_config = './config.yaml'
+   
+   # Make a dictionary of our variables #
+   config_vars = {'var1' : 'True',
+                  'var2' : 'A',
+                  'var3' : 100.6,
+                  'var4' : [1,2,3,4,6]} 
+   
+   # Open a YAML file #
+   with open(out_config, 'w') as outfile:
+       yaml.dump(config_vars, outfile, default_flow_style=False)
+   
+
+Reading Configuration Files
+==========================================================================================
+   
+.. code-block:: bash
+   
+   import yaml
+   
+   # Location of configuration file #
+   in_config = './config.yaml'
+   
+   # Load the config file #
+   with open('config.yaml') as infile:
+       config = yaml.load(infile)
+ 
+   # Print the variables #
+   for 

@@ -1,0 +1,34 @@
+Title
+##########################################################################################
+
+Intro Documentation.
+
+Main Section
+******************************************************************************************
+
+Sub-Section
+==========================================================================================
+
+This assumes you have a GitHub account and the command line tools are configured on your computer.
+
+
+1. In the terminal navigate to the folder you want to upload as your repo. Set these variables.
+
+
+.. code-block:: bash
+
+   # Project Title #
+   project_title="# My Project title for the README.md"
+   
+   # Name the Commit (not really important) # 
+   commit_title="first_commit" 
+   
+
+
+Main Section 2
+******************************************************************************************
+
+Sub-Section
+==========================================================================================
+
+**sphinxb** - Function to clean _build, make HTML, and open _build/html/index.html.

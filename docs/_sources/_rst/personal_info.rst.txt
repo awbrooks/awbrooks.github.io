@@ -1,0 +1,82 @@
+
+**My Research Experience**
+******************************************************************************************
+
+|adk|
+
+.. |adk| image:: ../_images/brooks_adk.jpg
+   :width: 20 %
+   :alt: adk
+   
+**Andrew Brooks (Andy)**
+
+Ph.D. Candidate at Vanderbilt University
+
+awbrooks19 at gmail dot com
+
+- Appointment: `Vanderbilt Genetics Institute (VGI) <https://my.vanderbilt.edu/microbiome/>`_ - Human Genetics Research Program
+- Advisor: Seth Bordenstein Lab - Biological Sciences Department
+- Investigator on the `Vanderbilt Microbiome Initiative (VMI) <https://my.vanderbilt.edu/microbiome/>`_
+   
+**Research Experience**
+
+Phylosymbiosis
+==========================================================================================
+   
+|phylosymbiosis| |phylosymbiosis_functional|
+   
+`Phylosymbiosis: Relationships and Functional Effects of Microbial Communities across Host Evolutionary History. <https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.2000225>`_ *PLoS Biology* (2016) - P.I. Seth Bordenstein
+
+**Abstract**: Phylosymbiosis was recently proposed to describe the eco-evolutionary pattern, whereby the ecological relatedness of host-associated microbial communities parallels the phylogeny of related host species. Here, we test the prevalence of phylosymbiosis and its functional significance under highly controlled conditions by characterizing the microbiota of 24 animal species from four different groups (Peromyscus deer mice, Drosophila flies, mosquitoes, and Nasonia wasps), and we reevaluate the phylosymbiotic relationships of seven species of wild hominids. We demonstrate three key findings. First, intraspecific microbiota variation is consistently less than interspecific microbiota variation, and microbiota-based models predict host species origin with high accuracy across the dataset. Interestingly, the age of host clade divergence positively associates with the degree of microbial community distinguishability between species within the host clades, spanning recent host speciation events (~1 million y ago) to more distantly related host genera (~108 million y ago). Second, topological congruence analyses of each group's complete phylogeny and microbiota dendrogram reveal significant degrees of phylosymbiosis, irrespective of host clade age or taxonomy. Third, consistent with selection on host–microbiota interactions driving phylosymbiosis, there are survival and performance reductions when interspecific microbiota transplants are conducted between closely related and divergent host species pairs. Overall, these findings indicate that the composition and functional effects of an animal's microbial community can be closely allied with host evolution, even across wide-ranging timescales and diverse animal systems reared under controlled conditions.
+
+.. |phylosymbiosis| image:: ../_images/phylosymbiosis.png
+   :width: 30 %
+   :alt: phylosymbiosis
+   
+.. |phylosymbiosis_functional| image:: ../_images/phylosymbiosis_functional.png
+   :width: 37 %
+   :alt: phylosymbiosis_functional
+
+Gut Microbiota Assembly Across Ethnicities
+==========================================================================================
+
+|ethnicity|
+
+`Gut Microbiota Diversity across Ethnicities in the United States. <https://www.biorxiv.org/content/early/2018/06/08/342915>`_ *bioRxiv* (2018) - P.I. Seth Bordenstein
+
+**Abstract**: Composed of hundreds of microbial species, the composition of the human gut microbiota can vary with chronic diseases underlying health disparities that disproportionally affect ethnic minorities. However, the influence of ethnicity on the gut microbiota remains largely unexplored and lacks reproducible generalizations across studies. By distilling associations between ethnicity and differences in two United States based 16S gut microbiota datasets including 1,673 individuals, we report 12 microbial genera and families that reproducibly vary by ethnicity. Interestingly, a majority of these microbial taxa, including the most heritable bacterial family, Christensenellaceae, overlap with genetically-associated taxa and form co-occurring clusters linked by similar fermentative and methanogenic metabolic processes. These results demonstrate recurrent associations between specific taxa in the gut microbiota and ethnicity, providing hypotheses for examining specific members of the gut microbiota as mediators of health disparities.
+
+.. |ethnicity| image:: ../_images/ethnicity.png
+   :width: 30 %
+   :alt: ethnicity
+   
+
+Vanderbilt Microbiome Initiative (VMI)
+==========================================================================================
+
+|vmi_logo|
+
+.. |vmi_logo| image:: ../_images/vmi_logo_stacked.png
+   :width: 20 %
+   :alt: vmi_logo
+
+Computational Experience
+==========================================================================================
+- **Computational Genetics, Bioinformatics, and Data Science**
+   - **Primary Coding Languages** - Python, Terminal, R
+   - **Experience** - Stata, C++, Java, SQL, HTML
+   - **HPC Cluster Computing** - `ACCRE <https://www.vanderbilt.edu/accre/>`_ 
+   - **Jupyter Notebooks** - Advanced customization, direct data transfer between python, R, and terminal
+   - **GitHub** - Repositories for multiple projects, github pages, automatic code documentation with *Sphinx*
+   - **Anaconda** - Environment and package management
+
+Additional Publications
+==========================================================================================
+
+Finer Scale Phylosymbiosis: Insights from Insect Viromes. *mSystems* (2018) - P.I. Seth Bordenstein
+
+`Evolutionary Genetics of Cytoplasmic Incompatibility Genes cifA and cifB in Prophage WO of Wolbachia. <https://doi.org/10.1093/gbe/evy012>`_ *Genome Biology and Evolution* (2018) - P.I. Seth Bordenstein
+
+`Genetic Signatures for Helicobacter pylori Strains of West African Origin. <https://doi.org/10.1371/journal.pone.0188804>`_ *PLoS One* (2017) - P.I. Tim Cover
+
+`Minimotif Miner 3.0: Database expansion and significantly improved reduction of false-positive predictions from consensus sequences. <http://doi.org/10.1093/nar/gkr1189>`_ *Nucleic Acids Research* (2012) - P.I. Martin Schiller

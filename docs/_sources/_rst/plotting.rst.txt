@@ -1,0 +1,75 @@
+Plotting in Python
+##########################################################################################
+
+**Plotting examples utilizing the *matplotlib* and *seaborn*.**
+
+   - Matplotlib was imported as *plt*: import matplotlib.pyplot as plt
+   - Seaborn was imported as *sns*: import seaborn as sns
+   - In jupyter notebooks add to plot inline: %matplotlib inline 
+
+Main Section
+******************************************************************************************
+
+
+
+.. code-block:: python
+  
+def plot_scatter(df,
+                 x_con,
+                 y_con,
+                 color_cat=None,
+                 row_cat=None,
+                 col_cat=None,
+                 file_path=None):
+    
+    
+    ##### CHOOSE PALETTE #############################
+
+    ### PALETTE - BRIGHT #############################
+    if color_cat != None:
+        pal = sns.color_palette(palette = "hls",
+                                n_colors = len(df[color_cat].unique()),
+                                desat=1.0)
+    else: pal=None
+    
+    ##################################################
+    ##### SET STYLE #####
+    sns.set(context='notebook', 
+            style  ='whitegrid', 
+            font   ='sans-serif', 
+            font_scale=1.2)
+    
+    
+    ##### FACETGRID ##################################
+    g = sns.FacetGrid(data=df, # INPUT DATAFRAME #
+                      hue = color_cat, # COLOR-BY-CATEGORY ##################################
+                      row = row_cat, # SPLIT_BY_VERTICALLY #
+                      col = col_cat, # SPLIT-BY-HORIZONTALLY #
+                      palette = pal, # COLOR PALETTE: "hls" "RdBu" #
+                      height = 10, aspect = 1.3, # SET SIZE AND ASPECT #
+                      sharex=True, sharey=True)
+    
+    ##### SCATTER PLOT ###############################
+    ### SET POINT OPTIONS ###
+    kws = dict(s=50, 
+               linewidth=.5, 
+               edgecolor=None, 
+               alpha=1.0)
+    
+    ### PLOTTING FUNCTION ###
+    g = (g.map(
+           plt.scatter, # TYPE OF PLOT #
+           x_con, # X #
+           y_con, # Y #
+           **kws) # PLOTTING FUNCTION KEYWORDS #
+           .add_legend() # ADD LEGEND #
+           .set_axis_labels(x_con, y_con)) 
+
+    if file_path != None:
+        plt.savefig(file_path)
+        plt.close()
+        return 0
+    else:
+        plt.show()
+        plt.close()
+        return 0

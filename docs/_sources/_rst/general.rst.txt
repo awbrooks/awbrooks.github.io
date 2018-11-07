@@ -1,0 +1,14 @@
+General Tools
+=====================
+
+**Python functions to fulfill general utility roles.**
+
+This includes sections for:
+   - Making Folders
+   - Date and Time Output
+
+Functions
+---------
+
+.. automodule:: general
+   :members:

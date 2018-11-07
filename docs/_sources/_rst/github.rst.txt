@@ -1,0 +1,91 @@
+GitHub and Sphinx
+##########################################################################################
+
+This covers commands for setting up and uploading GitHub repositories, and setting up sphinx
+documentation.
+
+GitHub
+******************************************************************************************
+
+Creating a GitHub Repository
+==========================================================================================
+
+This assumes you have a GitHub account and the command line tools are configured on your computer.
+
+
+1. In the terminal navigate to the folder you want to upload as your repo. Set these variables.
+
+
+.. code-block:: bash
+
+   # Project Title #
+   project_title="# My Project title for the README.md"
+   
+   # Name the Commit (not really important) # 
+   commit_title="first_commit" 
+   
+   # GitHub Address for Repo #
+   gh_title="git@github.com:awbrooks19/vmi_microbiome_bootcamp_II.git"
+	
+2. Initialize the folder as a repository.
+
+.. code-block:: bash
+
+   # Initialize the repo #
+   git init
+   
+3. Create a readme.md and chan ge to your own custom title.
+
+.. code-block:: bash
+
+   # Create readme with project title #
+   echo "$project_title" > README.md
+
+4. Add the file info to the update.
+
+.. code-block:: bash 
+   
+   # Add all files to commit #
+   git add -A
+   
+5. Commit the files to the update with your own name for the update in the quotes.
+
+.. code-block:: bash 
+   
+   # Commit the files #
+   git commit -m "$commit_title"
+   
+6. Setup the repo with the github address it will be sent to (use your own id).
+
+.. code-block:: bash 
+   
+   # Setup repo address #
+   git remote add origin "$gh_title"
+   
+7. Push everything to the online repo.
+
+.. code-block:: bash 
+   
+   # Push the repo to github #
+   git push -f origin master
+
+
+Sphinx
+******************************************************************************************
+
+Updating a Sphinx Website Locally
+==========================================================================================
+
+**sphinxb** - Function to clean _build, make HTML, and open _build/html/index.html.
+
+   - This is useful when rapidly implementing and testing changes to a sphinx webpage.
+   
+.. code-block:: bash
+
+    
+   sphinxb(){
+      # Function to clean _build, make HTML, and open _build/html/index.html. #
+      make clean
+      make html
+      open _build/html/index.html
+   }
