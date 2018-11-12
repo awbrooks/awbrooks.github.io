@@ -1,0 +1,54 @@
+
+**Code**
+------------------------------------------------------------------------------------------
+
++------------------+----------------------------------------------------------------+
+|                  | Contains tutorials and functions / classes developed for       |
+|      |fox|       | bioinformatics analyses and data science.                      |
+|                  | These may be varying stages of completion                      |
+|                  |                                                                |
++------------------+----------------------------------------------------------------+
+
+.. |fox| image:: ./_images/fox_image.jpg
+   :width: 1000 %
+   :alt: fox
+
+**Python**
+******************************************************************************************
+
+Example Code
+=========================================================================================
+
+**Tutorial-esque code examples for a wide range of tasks**
+
+.. toctree::
+   :maxdepth: 1
+   
+   ./_rst/pandas
+   ./_rst/plotting
+   ./_rst/config
+   
+
+Tools
+==========================================================================================
+
+**Complete functions and classes with documentation**
+
+.. toctree::
+   :maxdepth: 1
+   
+   ./_rst/general
+   ./_rst/func_string_matching
+   
+
+**Terminal**
+******************************************************************************************
+
+**Bioinformatics Tutorials**
+******************************************************************************************
+
+.. toctree::
+   :maxdepth: 1
+   
+   ./_rst/blast
+   ./_rst/github

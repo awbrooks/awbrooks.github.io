@@ -1,0 +1,19 @@
+Public Presentation of the Microbiome at the Nashville Public Library
+##########################################################################################
+
+**Interested in the microbiome, and a fun kid's activity assembling their own microbiome?**
+
+**Science Club at the Nashville Public Library - Children's Center**
+
+**2:30pm on December 8th, 2018**
+
+All ages are welcome! Bring any questions you have about the microbiome and how it affects your health.
+
+Invitiation Poster
+******************************************************************************************
+
+
+.. figure:: ../_images/asm_library_poster.png
+   :scale: 40%
+   :alt: asm_library_poster
+   
