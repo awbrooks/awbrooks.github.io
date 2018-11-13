@@ -14,6 +14,6 @@ Invitiation Poster
 
 
 .. figure:: ../_images/asm_library_poster.png
-   :scale: 40%
+   :scale: 60%
    :alt: asm_library_poster
    
