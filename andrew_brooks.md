@@ -1,9 +1,6 @@
 ---
 layout: page
-title: Andrew W. Brooks
+title:
 subtitle: About Me
 ---
 
-Test
-
-##### Vanderbilt University
