@@ -4,12 +4,16 @@ description: > # your text below (remove <br> elements if you don't need line br
   Postdoctoral Researcher and NIH Fellow
   <br><br>
   Stanford University 
+  <br>
   Medical Center
+  <br>
   Genetics Department
   <br><br>
-  P.I. Michael P. Snyder
+  Lab P.I. Michael P. Snyder
+  <br>
+  Director Stanford Genetics
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  <a href="https://www.linkedin.com/in/awbrooks19/">View My LinkedIn Profile</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
